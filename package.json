@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "gatsby-transformer-remark": "^6.13.1"
+  }
+}
