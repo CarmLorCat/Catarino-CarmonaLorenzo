@@ -4,13 +4,40 @@ import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
-const About = ({data})=>{
-    const { name, company } =  data.site.siteMetadata.contact
+const Contact = ({data})=>{
+    const { name, company, address } =  data.site.siteMetadata.contact
     return(
         <Layout>
-        <Seo title="About us"/>
-        <h1>About us</h1>
-        <p>`${company} was started by ${name} in 2024.`</p>
+        <Seo title="Contact us"/>
+        <h1>Please send all inquiries to: </h1>
+        <p>{company}</p>
+        <div>{`C/O ${name}`}</div>
+        <div>{address}</div>
+        <div style={{maxWidth: `300px`, marginBottom: `1.45rem` }}>
+        <StaticImage
+        src="../images/gatsby-icon.png"
+        width={300}
+        quality={95}
+        formats={["auto", "webp","avif" ]}
+        alt="A Gatsby blog"
+        style={{ marginBottom: `1.45rem`}}/>
+        </div>
+        <Link to="/">Home</Link>
         </Layout>
     )
 }
+
+export default Contact
+export const query = graphql`
+query{
+    site{
+    siteMetadata{
+        contact{
+            name
+            company
+            address
+        }
+    }
+    }
+}
+`
