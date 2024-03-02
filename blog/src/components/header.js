@@ -1,5 +1,5 @@
 import * as React from "react"
-import { propTypes } from "prop-types"
+import { PropTypes } from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
@@ -10,10 +10,12 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 height: 50px;
+background: ${props=> props.theme.header.backgroundColor};
 `
 const StyledLink = styled(Link)`
 font-size: var(--font-sm);
 text-decoration: none;
+color: ${props=> props.theme.header.color};
 `
 const Header = ({ siteTitle }) => (
   <StyledHeader>
@@ -24,7 +26,7 @@ const Header = ({ siteTitle }) => (
 )
 
 Header.propTypes={
-  siteTitle: propTypes.string
+  siteTitle: PropTypes.string
 }
 
 Header.defaultProps= {

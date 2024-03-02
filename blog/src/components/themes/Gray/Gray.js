@@ -5,5 +5,4 @@ const theme={
     }
 }
 
-export {theme as Gray
-}
+export {theme as Gray}
