@@ -14,14 +14,14 @@ const IndexPage = ({data})=>(
   <List width={[1,2/3, 7/8]} p={2}> 
   {
     data.allContentfulBlogPost.edges.map(edge=>(
-      <ListItem key={edge.node.id}>
+      <ListItem p={3} key={edge.node.id}>
       <Link to={edge.node.slug}>{edge.node.title}</Link>
       <div>
       <GatsbyImage
     image={edge.node.heroImage.gatsbyImageData}/>
       </div>
       <div>
-      {edge.node.body.childMarkdownRemark.excerpt}<div/>
+      {edge.node.body.childMarkdownRemark.excerpt}
       </div>
     </ListItem>
     
@@ -58,7 +58,7 @@ export const query = graphql`
           gatsbyImageData(
             layout: CONSTRAINED
             placeholder: BLURRED
-            width: 300
+            width: 600
           )
         }
       }

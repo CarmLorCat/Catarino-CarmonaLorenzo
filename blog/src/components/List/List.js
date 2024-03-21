@@ -5,7 +5,7 @@ import { BaseContainer } from "../BaseContainer"
 export const List = ({children, ...rest}) =>(
     <BaseContainer
     flex
-    flexDirection = 'colum'
+    flexDirection = 'column'
     mx = 'auto'
     as = 'ul'
     {...rest}
@@ -14,6 +14,6 @@ export const List = ({children, ...rest}) =>(
     </BaseContainer>
 )
 
-List.PropTypes = {
+List.propTypes = {
     children: PropTypes.node.isRequired
 }
