@@ -18,18 +18,20 @@ text-decoration: none;
 color: ${props=> props.theme.header.color};
 `
 const Header = ({ siteTitle }) => (
-  <StyledHeader>
+  <Outer>
+  <H1> 
     <StyledLink to="/">
     {siteTitle}
     </StyledLink>
-  </StyledHeader>
+    </H1>
+  </Outer>
 )
 
 Header.propTypes={
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 }
 
 Header.defaultProps= {
-  siteTitle: ""
+  siteTitle: ``,
 }
-export default Header
+export { Header}
