@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const Outer = styled.header`
+const StyledHeader = styled.header`
 margin: 0 auto;
 padding: var(--space-4) var(--size-gutter);
 display: flex;
@@ -18,20 +18,18 @@ text-decoration: none;
 color: ${props=> props.theme.header.color};
 `
 const Header = ({ siteTitle }) => (
-  <Outer>
-  <h1> 
+  <StyledHeader>
     <StyledLink to="/">
     {siteTitle}
     </StyledLink>
-    </h1>
-  </Outer>
+    </StyledHeader>
 )
 
 Header.propTypes={
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string
 }
 
 Header.defaultProps= {
-  siteTitle: ``,
+  siteTitle: ""
 }
 export { Header }
