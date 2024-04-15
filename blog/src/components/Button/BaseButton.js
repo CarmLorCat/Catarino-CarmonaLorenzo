@@ -14,6 +14,6 @@ cursor: pointer;
 export const BaseButton = ({children, ...rest}) =>
 <Reset {...rest}>{children}</Reset>
 
-BaseButton.protoTypes= {
+BaseButton.propTypes= {
     children: PropTypes.node.isRequired
 }
