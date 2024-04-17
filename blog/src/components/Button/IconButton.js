@@ -7,7 +7,7 @@ const StyledButton = styled(BaseButton)`
 //Inject  theme styles here later
 
 ${({theme, variant}) => theme.variants.iconButton[variant || 'primary']}
-
+`
 
 export const IconButton = styled(({icon, ...rest})=>{
     let clone= React.cloneElement(icon, rest)
@@ -15,7 +15,7 @@ export const IconButton = styled(({icon, ...rest})=>{
 })`
 //We could add styles here, but is not necessary.
 //The main reason this is a styled component is to wrap th e styled icon passed in as a prop.
-
+`
 IconButton.defaultProps ={
     size: 24
 }
