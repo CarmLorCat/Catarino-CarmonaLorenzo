@@ -1,10 +1,10 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import styled from 'styled-components'
-import {Search} from 'styled-icons/feather'
+import styled , {ThemeConsumer} from 'styled-components'
+import { Flex } from "rebass"
 import {H1} from "../Heading"
-import { IconButton } from '../Button'
+import { SearchButton } from '../Button'
 import { Section } from '../Section'
 
 const StyledHeader = styled.header`
