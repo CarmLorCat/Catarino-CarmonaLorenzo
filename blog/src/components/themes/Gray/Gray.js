@@ -44,4 +44,4 @@ const theme={
         }
     }
 
-export const Gray= {...theme, variants }
+export const Gray= {...theme, variants, images, icons }
