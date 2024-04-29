@@ -1,3 +1,2 @@
-# Catarino-CarmonaLorenzo
-
-Hello Class!!
+# Project_2
+ITDEV-164 Project 2 
